@@ -4,7 +4,7 @@ const tiers = [
     name: "Free",
     price: "$0",
     period: "forever",
-    description: "For individuals and small projects.",
+    description: "For individuals exploring data pipelines.",
     features: [
       "Up to 3 pipelines",
       "1 team member",
@@ -18,30 +18,46 @@ const tiers = [
     name: "Pro",
     price: "$49",
     period: "/month",
-    description: "For growing teams with advanced needs.",
+    description: "For professionals and small teams.",
     features: [
       "Unlimited pipelines",
-      "Up to 10 team members",
+      "Up to 3 team members",
       "Priority support",
       "All integrations",
-      "Advanced scheduling",
+      "SQL editor & preview",
       "Data catalog",
     ],
     cta: "Start Free Trial",
     highlighted: true,
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    period: "",
-    description: "For organizations at scale.",
+    name: "Team",
+    price: "$99",
+    period: "/month",
+    description: "For growing teams that need collaboration.",
     features: [
       "Everything in Pro",
+      "Up to 20 team members",
+      "Role-based access (RBAC)",
+      "Advanced scheduling",
+      "Dependency graph",
+      "Team support",
+    ],
+    cta: "Start Free Trial",
+    highlighted: false,
+  },
+  {
+    name: "Self-Hosted",
+    price: "$1,999",
+    period: "/year",
+    description: "Full control on your own infrastructure.",
+    features: [
+      "Everything in Team",
       "Unlimited team members",
+      "Deploy on-premise or private cloud",
+      "License + updates included",
       "SSO & SAML",
       "Dedicated support",
-      "SLA guarantees",
-      "On-premise option",
     ],
     cta: "Contact Us",
     highlighted: false,
@@ -56,11 +72,11 @@ const tiers = [
         Simple, transparent <span class="gradient-text">pricing</span>
       </h2>
       <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-400">
-        Start free and scale as your data needs grow.
+        Start free and scale as your data needs grow. No per-row fees, no surprise bills.
       </p>
     </div>
 
-    <div class="mt-16 grid gap-8 lg:grid-cols-3">
+    <div class="mt-16 grid gap-6 lg:grid-cols-4">
       {tiers.map((tier) => (
         <div
           class:list={[
